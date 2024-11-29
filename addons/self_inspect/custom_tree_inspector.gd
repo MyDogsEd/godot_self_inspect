@@ -32,3 +32,7 @@ func _on_item_selected() -> void:
 	var tree_item = get_selected()
 	var node = tree_item.get_metadata(0)
 	EditorInterface.inspect_object(node)
+
+
+func _on_custom_tree_inspector_close_requested() -> void:
+	$"..".queue_free()
